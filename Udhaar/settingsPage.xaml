@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="Udhaar.settingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Udhaar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="contactsScreen">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="19,0,0,0">
+            <TextBlock Text="About" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}">
+            </TextBlock>
+        </StackPanel>
+        <TextBlock TextWrapping="WrapWholeWords" FontSize="24" Margin="12,9.667,0,144" Width="398" Grid.Row="1" RenderTransformOrigin="0.503,0.732" SelectionChanged="TextBlock_SelectionChanged">
+            <LineBreak/>
+        	<Run Text="Udhaar is an app which helps you manage your hard earned money and helps you remember all the Loans that you gave or took among your friends."/>
+        	<LineBreak/>
+        	<Run Text=" "/>
+        	<LineBreak/>
+        	<Run Text="Equipped with a feature of notifications that notifies the person on the other end of a deal immediately. While corresponding adjustments are reflected in their accounts almost simultaneously."/>
+        </TextBlock>
+        <StackPanel Orientation="Horizontal" Margin="-20,0,0,0" Grid.Row="2">
+
+            <Button x:Name="favouritesNavigate" 
+        		Content="Requests"
+        		VerticalAlignment="Bottom" 
+        		Click="favouritesNavigate_Click"
+        		BorderThickness="0" FontSize="14"
+                    />
+            <Button x:Name="contactsNavigate" 
+        		Content="Phone"
+        		VerticalAlignment="Bottom" 
+        		Click="contactsNavigate_Click"
+        		BorderThickness="0" FontSize="14"
+                    />
+            <Button x:Name="amountNavigate" 
+        		Content="Summary"
+        		VerticalAlignment="Bottom" 
+        		Click="amountNavigate_Click"
+        		BorderThickness="0" FontSize="14"
+                    />
+            <Button x:Name="settingsNavigate"  
+        		Content="About"
+        		VerticalAlignment="Bottom"
+        		Click="settingsNavigate_Click" 
+        		BorderThickness="0" FontSize="14"
+        		Background="SteelBlue"
+            	/>
+        </StackPanel>
+    </Grid>
+</Page>
